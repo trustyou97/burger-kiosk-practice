@@ -43,7 +43,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .touch:active{transform:translateY(4px);box-shadow:0 2px 0 var(--yel-2)}
 @keyframes pulse{50%{transform:scale(1.04)}}
 .notice{font-size:.85rem;opacity:.9;max-width:30em}
-.start-tools{position:absolute;right:1rem;top:1rem;display:flex;gap:.5rem;z-index:2}
+.start-tools{position:absolute;left:1rem;top:1rem;display:flex;gap:.5rem;z-index:2}
 
 /* 매장/포장 */
 #s-type{background:var(--bg)}
@@ -157,7 +157,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .mission{background:var(--yel-soft);border-bottom:2px solid var(--yel);padding:.5rem 1rem;font-weight:700;font-size:.9rem;display:flex;gap:.5rem;align-items:center}
 .mission b{color:var(--red)}
 
-#s-start>.start-tools,#s-start>.credit{position:absolute}
+#s-start>.start-tools,#s-start>.credit,#s-start>.ktlogo{position:absolute}
 #s-start>.credit{right:auto;left:50%;transform:translateX(-50%);bottom:.6rem;color:var(--ink-2);z-index:3}
 #s-start>.notice{margin-bottom:1.6rem}
 /* ===== 라이트 테마 (패스트푸드 키오스크 느낌) ===== */
@@ -199,6 +199,16 @@ body{background:#e9e6df}
 .opt.on{box-shadow:0 0 0 2px var(--red) inset}
 .cartbar{border-top:1px solid var(--line)}
 .btn.red{background:var(--red)}
+
+/* ===== 매장/포장 · 구성 버튼 · KT 로고 ===== */
+.pickwrap{gap:1.2rem}
+.pick{padding:0;justify-content:center;gap:1rem;color:var(--red);border:3px solid var(--line);background:#fff;font-size:2.2rem}
+.pick .lbl{padding:0;color:var(--ink);font-weight:900}
+.pick:active{border-color:var(--red);background:var(--red-soft)}
+.opt .ico{font-size:2rem;line-height:1;padding-top:.7rem}
+.opt:has(.ico){padding:0 0 .6rem}
+.ktlogo{height:1.35rem;width:auto;margin-left:.2rem;flex-shrink:0}
+.ktlogo.abs{position:absolute;right:.9rem;top:.8rem;z-index:6}
 </style>
 </head>
 <body>
@@ -221,10 +231,14 @@ body{background:#e9e6df}
 <!-- 매장/포장 -->
 <section class="screen hidden" id="s-type">
   <div class="topbar"><span class="logo">B</span><span class="t">식사 장소를 골라주세요</span><span class="sp"></span><button class="chip" data-home>처음으로</button></div>
-  <div class="title">드시고 가시나요, 가져가시나요?</div>
+  <div class="title">식사 방법을 선택해 주세요</div>
   <div class="pickwrap">
-    <button class="pick" data-type="매장"><img src="images/t_dine.jpg" alt=""><span class="lbl">매장에서 먹기<small>트레이에 담아 드려요</small></span></button>
-    <button class="pick" data-type="포장"><img src="images/t_take.jpg" alt=""><span class="lbl">포장하기<small>종이봉투에 담아 드려요</small></span></button>
+    <button class="pick" data-type="매장">
+      <svg viewBox="0 0 64 64" width="96" height="96" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 28h48"/><path d="M12 28v26h40V28"/><path d="M8 28l4-14h40l4 14"/><path d="M26 54V40h12v14"/></svg>
+      <span class="lbl">매장</span></button>
+    <button class="pick" data-type="포장">
+      <svg viewBox="0 0 64 64" width="96" height="96" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22h40l-3 32H15z"/><path d="M23 22v-4a9 9 0 0 1 18 0v4"/><path d="M26 34c1 4 11 4 12 0"/></svg>
+      <span class="lbl">포장</span></button>
   </div>
 </section>
 
@@ -410,9 +424,9 @@ function openItem(id){
       <div class="hd"><img class="ph" src="images/${m.id}.jpg" alt=""><div><div class="nm">${m.nm}</div><div class="pr">${won(m.pr)}</div></div><button class="x" id="mx">✕</button></div>
       <div class="bd">
         ${m.set?`<div class="grp"><h4>구성 선택</h4><div class="opts">
-          <button class="opt ${st.mode==='single'?'on':''}" data-k="mode" data-v="single"><img class="oi" src="images/o_single.jpg" alt="">단품<small>버거만</small></button>
-          <button class="opt ${st.mode==='set'?'on':''}" data-k="mode" data-v="set"><img class="oi" src="images/o_set.jpg" alt="">세트<small>+${won(SET_UP.set)}</small></button>
-          <button class="opt ${st.mode==='large'?'on':''}" data-k="mode" data-v="large"><img class="oi" src="images/o_large.jpg" alt="">라지 세트<small>+${won(SET_UP.large)}</small></button></div></div>
+          <button class="opt ${st.mode==='single'?'on':''}" data-k="mode" data-v="single"><span class="ico">🍔</span>단품<small>버거만</small></button>
+          <button class="opt ${st.mode==='set'?'on':''}" data-k="mode" data-v="set"><span class="ico">🍔🍟</span>세트<small>+${won(SET_UP.set)}</small></button>
+          <button class="opt ${st.mode==='large'?'on':''}" data-k="mode" data-v="large"><span class="ico">🍟🥤</span>라지 세트<small>+${won(SET_UP.large)}</small></button></div></div>
         ${st.mode!=='single'?`<div class="grp"><h4>사이드 선택 <small>세트에 포함</small></h4>${o(SIDES,'side')}</div>
         <div class="grp"><h4>음료 선택 <small>세트에 포함</small></h4>${o(DRINKS,'drink')}</div>`:''}`:''}
         ${m.size?`<div class="grp"><h4>사이즈 선택</h4><div class="opts two">
@@ -483,7 +497,10 @@ function finish(how){
   const iv=setInterval(()=>{n--;if($('#s-done').classList.contains('hidden')){clearInterval(iv);return;}
     $('#cd').textContent=n+'초 후 처음 화면으로 돌아가요';if(n<=0){clearInterval(iv);goHome();}},1000);
 }
-document.addEventListener('DOMContentLoaded',()=>{renderMenu();show('s-start')});
+document.addEventListener('DOMContentLoaded',()=>{
+  $$('.topbar').forEach(t=>{const i=document.createElement('img');i.src='kt_it_logo.png';i.className='ktlogo';i.alt='KT IT서포터즈';t.appendChild(i)});
+  ['s-start','s-done'].forEach(id=>{const i=document.createElement('img');i.src='kt_it_logo.png';i.className='ktlogo abs';i.alt='KT IT서포터즈';$('#'+id).appendChild(i)});
+  renderMenu();show('s-start')});
 </script>
 </body>
 </html>

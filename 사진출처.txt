@@ -1,33 +1,28 @@
-사진 출처: Unsplash (Unsplash License, 무료 사용 가능). 각 사진은 Unsplash의 해당 작가 작품입니다.
+사진 출처: Unsplash (Unsplash License, 무료 사용 가능)
 
-b1: https://unsplash.com/photos/1568901346375-23c9450c58cd (photo-1568901346375-23c9450c58cd) - amirali mirhashemian / Unsplash
-b2: https://unsplash.com/photos/1667329829058-ac191ba4a905 (photo-1667329829058-ac191ba4a905) - Adam Bartoszewicz / Unsplash
-b3: https://unsplash.com/photos/1625683257212-116d74981941 (photo-1625683257212-116d74981941) - Israel Albornoz / Unsplash
-b4: https://unsplash.com/photos/1700768400970-428c50bffc11 (photo-1700768400970-428c50bffc11) - Crunch / Unsplash
-b5: https://unsplash.com/photos/1606755962773-d324e0a13086 (photo-1606755962773-d324e0a13086) - Eiliv Aceron / Unsplash
-b6: https://unsplash.com/photos/1595531172949-30922c28a240 (photo-1595531172949-30922c28a240) - Carlos Davila Cepeda / Unsplash
-b7: https://unsplash.com/photos/1757834787931-ddd70f3379a5 (photo-1757834787931-ddd70f3379a5) - Stanley Kustamin / Unsplash
-b8: https://unsplash.com/photos/1572802419224-296b0aeee0d9 (photo-1572802419224-296b0aeee0d9) - amirali mirhashemian / Unsplash
-k1: https://unsplash.com/photos/1619881590738-a111d176d906 (photo-1619881590738-a111d176d906) - Brett Jordan / Unsplash
-k2: https://unsplash.com/photos/1627662168223-7df99068099a (photo-1627662168223-7df99068099a) - Tyson / Unsplash
-k3: https://unsplash.com/photos/1567620832903-9fc6debc209f (photo-1567620832903-9fc6debc209f) - Chad Montano / Unsplash
-k4: https://unsplash.com/photos/1569691899455-88464f6d3ab1 (photo-1569691899455-88464f6d3ab1) - Erik Mclean / Unsplash
-s1: https://unsplash.com/photos/1630384060421-cb20d0e0649d (photo-1630384060421-cb20d0e0649d) - Mitchell Luo / Unsplash
-s2: https://unsplash.com/photos/1778449665117-2c607bbc7415 (photo-1778449665117-2c607bbc7415) - Shoeib Abolhassani / Unsplash
-s3: https://unsplash.com/photos/1781019450251-26e5ef42e089 (photo-1781019450251-26e5ef42e089) - Carmela Lustre / Unsplash
-s4: https://unsplash.com/photos/1562967916-eb82221dfb92 (photo-1562967916-eb82221dfb92) - Leo Roza / Unsplash
-d1: https://unsplash.com/photos/1629654613528-5d0a2e4166de (photo-1629654613528-5d0a2e4166de) - Qasim Malick / Unsplash
-d2: https://unsplash.com/photos/1621330716555-5cad596c4562 (photo-1621330716555-5cad596c4562) - montatip lilitsanong / Unsplash
-d3: https://unsplash.com/photos/1600271886742-f049cd451bba (photo-1600271886742-f049cd451bba) - Abhishek Hajare / Unsplash
-d4: https://unsplash.com/photos/1581996323441-538096e854b9 (photo-1581996323441-538096e854b9) - Mayur / Unsplash
-d5: https://unsplash.com/photos/1579954115545-a95591f28bfc (photo-1579954115545-a95591f28bfc) - Sebastian Coman Photography / Unsplash
-d6: https://unsplash.com/photos/1662192511709-e75d67367638 (photo-1662192511709-e75d67367638) - kimia kazemi / Unsplash
-e1: https://unsplash.com/photos/1697125138277-962ef4126de4 (photo-1697125138277-962ef4126de4) - Annie Hatuanh / Unsplash
-e2: https://unsplash.com/photos/1633881613795-d273150581ee (photo-1633881613795-d273150581ee) - VD Photography / Unsplash
-e3: https://unsplash.com/photos/1769434128977-d7619fd4d74e (photo-1769434128977-d7619fd4d74e) - Mila / Unsplash
-e4: https://unsplash.com/photos/1579954115563-e72bf1381629 (photo-1579954115563-e72bf1381629) - Sebastian Coman Photography / Unsplash
-o_single: https://unsplash.com/photos/1568901346375-23c9450c58cd (photo-1568901346375-23c9450c58cd) - amirali mirhashemian / Unsplash
-o_set: https://unsplash.com/photos/1551782450-a2132b4ba21d (photo-1551782450-a2132b4ba21d) - sk / Unsplash
-o_large: https://unsplash.com/photos/1763689389824-dd2cea2e5772 (photo-1763689389824-dd2cea2e5772) - Hanvin Cheong / Unsplash
-t_dine: https://unsplash.com/photos/1551782450-17144efb9c50 (photo-1551782450-17144efb9c50) - sk / Unsplash
-t_take: https://unsplash.com/photos/1616429368325-d5d7542b0ec3 (photo-1616429368325-d5d7542b0ec3) - Dmitry Mashkin / Unsplash
+b1: https://unsplash.com/photos/1552526881-721ce8509abb - Mae Mu / Unsplash
+b2: https://unsplash.com/photos/1515544040108-7b81c7bddda9 - Redd Francisco / Unsplash
+b3: https://unsplash.com/photos/1601893907888-d8c9f0ecf5d3 - Zoran Borojevic / Unsplash
+b4: https://unsplash.com/photos/1700768400970-428c50bffc11 - Crunch / Unsplash
+b5: https://unsplash.com/photos/1606755962773-d324e0a13086 - Eiliv Aceron / Unsplash
+b6: https://unsplash.com/photos/1667329829058-ac191ba4a905 - Adam Bartoszewicz / Unsplash
+b7: https://unsplash.com/photos/1757834787931-ddd70f3379a5 - Stanley Kustamin / Unsplash
+b8: https://unsplash.com/photos/1713330801172-03f8d1c0dde7 - amirali mirhashemian / Unsplash
+k1: https://unsplash.com/photos/1619881590738-a111d176d906 - Brett Jordan / Unsplash
+k2: https://unsplash.com/photos/1627662168223-7df99068099a - Tyson / Unsplash
+k3: https://unsplash.com/photos/1624153064067-566cae78993d - Keriliwi / Unsplash
+k4: https://unsplash.com/photos/1567620832903-9fc6debc209f - Chad Montano / Unsplash
+s1: https://unsplash.com/photos/1615485290836-4ebcebf44aaf - Mockup Graphics / Unsplash
+s2: https://unsplash.com/photos/1593895647433-5a608a3bd379 - Egidijus Bielskis / Unsplash
+s3: https://unsplash.com/photos/1781019450251-26e5ef42e089 - Carmela Lustre / Unsplash
+s4: https://unsplash.com/photos/1562967916-eb82221dfb92 - Leo Roza / Unsplash
+d1: https://unsplash.com/photos/1605005601738-6404a2caffc5 - Jana Knorr / Unsplash
+d2: https://unsplash.com/photos/1621330716555-5cad596c4562 - montatip lilitsanong / Unsplash
+d3: https://unsplash.com/photos/1697399075538-1087356c81d8 - Willy Leal / Unsplash
+d4: https://unsplash.com/photos/1581996323441-538096e854b9 - Mayur / Unsplash
+d5: https://unsplash.com/photos/1579954115545-a95591f28bfc - Sebastian Coman Photography / Unsplash
+d6: https://unsplash.com/photos/1588710929895-6ee7a0a4d155 - engin akyurt / Unsplash
+e1: https://unsplash.com/photos/1636564499112-6113e73c504a - charlesdeluvio / Unsplash
+e2: https://unsplash.com/photos/1633881613795-d273150581ee - VD Photography / Unsplash
+e3: https://unsplash.com/photos/1572383672419-ab35444a6934 - Danil Aksenov / Unsplash
+e4: https://unsplash.com/photos/1579954115563-e72bf1381629 - Sebastian Coman Photography / Unsplash
