@@ -64,7 +64,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 @media(min-width:620px){.grid{grid-template-columns:repeat(3,1fr)}}
 .card{background:#fff;border:2px solid var(--line);border-radius:var(--r);overflow:hidden;text-align:left;display:flex;flex-direction:column;position:relative}
 .card:active{border-color:var(--red);transform:scale(.98)}
-.card .pic{aspect-ratio:1/1;width:100%;object-fit:cover;background:#f1ece0}
+.card .pic{display:block;aspect-ratio:1/1;width:100%;height:auto;object-fit:cover;background:#f1ece0}
+.grid{grid-auto-rows:max-content}.card{height:auto}
 .card{border-radius:20px;border:3px solid transparent;box-shadow:0 3px 10px rgba(0,0,0,.08)}
 .card .info{text-align:center}
 .card .info{padding:.6rem .7rem .8rem}
