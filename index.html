@@ -440,10 +440,20 @@ const won=n=>n.toLocaleString('ko-KR')+'원';
 let cart=[], orderType='', curCat='rec', orderSeq=100+Math.floor(Math.random()*80), idle=null, missionIdx=0, fs=1;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 
-function show(id){
+var navStack=[];const NAV=['s-start','s-type','s-menu','s-cart','s-pay'];
+function show(id,noPush){
   $$('.screen').forEach(s=>s.classList.add('hidden'));
   $('#'+id).classList.remove('hidden');
+  if(NAV.includes(id)&&!noPush&&navStack[navStack.length-1]!==id)navStack.push(id);
   resetIdle();
+}
+/* 이전 버튼: 방금 보던 바로 전 화면으로 */
+function goBack(){
+  if(navStack.length<2)return;
+  navStack.pop();
+  const id=navStack[navStack.length-1];
+  if(id==='s-menu')renderMenu();else if(id==='s-cart')renderCart();else if(id==='s-pay')renderPaySelect();
+  show(id,true);
 }
 function toast(msg){
   const t=document.createElement('div');t.className='toast';t.textContent=msg;
@@ -467,12 +477,12 @@ function askIdle(){
   const iv=setInterval(()=>{n--;const e=$('#idleN');if(e)e.textContent=n;if(n<=0){clearInterval(iv);root.innerHTML='';goHome();}},1000);
   $('#idleOk').onclick=()=>{clearInterval(iv);root.innerHTML='';resetIdle();};
 }
-function goHome(){clearPayTimers();discount=0;usedMethods=[];cart=[];orderType='';curCat='rec';show('s-start');clearTimeout(idle);}
+function goHome(){navStack=[];clearPayTimers();discount=0;usedMethods=[];cart=[];orderType='';curCat='rec';show('s-start');clearTimeout(idle);}
 
 /* ===== 시작 ===== */
 $('#btnStart').onclick=()=>show('s-type');
 $$('[data-home]').forEach(b=>b.onclick=goHome);
-$('#menuBack').onclick=()=>show('s-type');
+$('#menuBack').onclick=goBack;
 $$('[data-type]').forEach(b=>b.onclick=()=>{orderType=b.dataset.type;$('#typeChip').textContent=orderType==='매장'?'🍽️ 매장':'🛍️ 포장';renderMenu();show('s-menu');});
 $('#fsUp').onclick=()=>{fs=Math.min(1.3,fs+.1);document.documentElement.style.setProperty('--fs',fs)};
 $('#fsDown').onclick=()=>{fs=Math.max(.9,fs-.1);document.documentElement.style.setProperty('--fs',fs)};
@@ -573,7 +583,8 @@ function renderCart(){
   $$('[data-p]').forEach(b=>b.onclick=()=>{const c=cart[b.dataset.p];c.qty=Math.min(9,c.qty+1);renderCart();updateBar();});
   $$('[data-d]').forEach(b=>b.onclick=()=>{cart.splice(b.dataset.d,1);renderCart();updateBar();});
 }
-$('#cartBack').onclick=$('#cartMore').onclick=()=>{renderMenu();show('s-menu');};
+$('#cartBack').onclick=goBack;
+$('#cartMore').onclick=()=>{renderMenu();show('s-menu');};
 $('#cartClear').onclick=()=>{cart=[];renderCart();updateBar();};
 
 /* ===== 결제 ===== */
@@ -582,7 +593,7 @@ const payable=()=>Math.max(0,cartTotals().sum-discount);
 function later(fn,ms){const t=setTimeout(fn,ms);payTimers.push(t);return t}
 function clearPayTimers(){payTimers.forEach(clearTimeout);payTimers=[]}
 $('#cartPay').onclick=()=>{discount=0;usedMethods=[];receiptPrinted=false;renderPaySelect();show('s-pay');};
-$('#payBack').onclick=()=>{renderCart();show('s-cart');};
+$('#payBack').onclick=goBack;
 $('#pgBack').onclick=()=>{clearPayTimers();renderPaySelect();show('s-pay');};
 function renderPaySelect(){
   const t=cartTotals().sum;
