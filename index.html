@@ -296,7 +296,7 @@ body{background:#e9e6df}
 
 <!-- 매장/포장 -->
 <section class="screen hidden" id="s-type">
-  <div class="topbar"><span class="logo">B</span><span class="t">식사 장소를 골라주세요</span><span class="sp"></span><button class="chip" data-home>처음으로</button></div>
+  <div class="topbar"><button class="chip" id="typeBack">◀ 이전</button><span class="t">식사 장소를 골라주세요</span><span class="sp"></span><button class="chip" data-home>처음으로</button></div>
   <div class="title">식사 방법을 선택해 주세요</div>
   <div class="pickwrap">
     <button class="pick" data-type="매장">
@@ -310,7 +310,7 @@ body{background:#e9e6df}
 
 <!-- 메뉴 -->
 <section class="screen hidden" id="s-menu">
-  <div class="topbar"><span class="logo">B</span><span class="t">메뉴 선택</span><span class="chip" id="typeChip"></span><span class="sp"></span><button class="chip" data-home>처음으로</button></div>
+  <div class="topbar"><button class="chip" id="menuBack">◀ 이전</button><span class="t">메뉴 선택</span><span class="chip" id="typeChip"></span><span class="sp"></span><button class="chip" data-home>처음으로</button></div>
   <div class="mission" id="mission">🎯 연습 미션: <span id="missionTxt"></span> <button class="chip" style="background:var(--yel);color:var(--ink);margin-left:auto" id="newMission">바꾸기</button></div>
   <div class="body"><nav class="cats" id="cats"></nav><div class="grid" id="grid"></div></div>
   <div class="cartbar"><div class="sum">담은 메뉴 <b id="cCount">0</b>개 · <b id="cSum">0</b>원</div>
@@ -319,7 +319,7 @@ body{background:#e9e6df}
 
 <!-- 장바구니 -->
 <section class="screen hidden" id="s-cart">
-  <div class="topbar"><button class="chip" id="cartBack">◀ 메뉴로</button><span class="t">주문 내역 확인</span><span class="sp"></span><button class="chip" id="cartClear">전체 삭제</button></div>
+  <div class="topbar"><button class="chip" id="cartBack">◀ 이전</button><span class="t">주문 내역 확인</span><span class="sp"></span><button class="chip" id="cartClear">전체 삭제</button></div>
   <div class="list" id="cartList"></div>
   <div class="total">
     <div class="l"><span>주문 수량</span><span id="tQty"></span></div>
@@ -330,7 +330,7 @@ body{background:#e9e6df}
 
 <!-- 결제 수단 -->
 <section class="screen hidden" id="s-pay">
-  <div class="topbar"><button class="chip" id="payBack">◀ 뒤로</button><span class="t">결제 방법 선택</span></div>
+  <div class="topbar"><button class="chip" id="payBack">◀ 이전</button><span class="t">결제 방법 선택</span></div>
   <div class="paysum" id="paySum"></div>
   <div class="paygrid">
     <button class="pay" data-pay="card">
@@ -347,7 +347,7 @@ body{background:#e9e6df}
 
 <!-- 결제 진행 -->
 <section class="screen hidden" id="s-paying">
-  <div class="topbar"><button class="chip" id="pgBack">◀ 결제수단 변경</button><span class="t" id="pgTitle"></span></div>
+  <div class="topbar"><button class="chip" id="pgBack">◀ 이전</button><span class="t" id="pgTitle"></span></div>
   <div class="steps" id="steps"></div>
   <div class="stage" id="stage"></div>
 </section>
@@ -464,6 +464,8 @@ function goHome(){clearPayTimers();discount=0;usedMethods=[];cart=[];orderType='
 /* ===== 시작 ===== */
 $('#btnStart').onclick=()=>show('s-type');
 $$('[data-home]').forEach(b=>b.onclick=goHome);
+$('#typeBack').onclick=()=>show('s-start');
+$('#menuBack').onclick=()=>show('s-type');
 $$('[data-type]').forEach(b=>b.onclick=()=>{orderType=b.dataset.type;$('#typeChip').textContent=orderType==='매장'?'🍽️ 매장':'🛍️ 포장';renderMenu();show('s-menu');});
 $('#fsUp').onclick=()=>{fs=Math.min(1.3,fs+.1);document.documentElement.style.setProperty('--fs',fs)};
 $('#fsDown').onclick=()=>{fs=Math.max(.9,fs-.1);document.documentElement.style.setProperty('--fs',fs)};
