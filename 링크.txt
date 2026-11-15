@@ -1,0 +1,3 @@
+버거 키오스크 실습
+https://trustyou97.github.io/burger-kiosk-practice/
+GitHub: https://github.com/trustyou97/burger-kiosk-practice

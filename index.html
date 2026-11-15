@@ -55,16 +55,18 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .title{font-size:1.5rem;font-weight:900;text-align:center;padding:1.4rem 1rem 0}
 
 /* 메뉴 화면 */
-#s-menu .body{flex:1;display:flex;min-height:0}
-.cats{width:7.2rem;background:#fff;border-right:1px solid var(--line);overflow-y:auto;flex-shrink:0}
-.cat{width:100%;padding:1rem .3rem;display:flex;flex-direction:column;align-items:center;gap:.25rem;font-weight:700;font-size:.95rem;color:var(--ink-2);border-left:6px solid transparent}
-.cat .em{font-size:2rem}
-.cat.on{background:var(--yel-soft);color:var(--red);border-left-color:var(--red);font-weight:900}
-.grid{flex:1;overflow-y:auto;padding:.9rem;display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;align-content:start}
+#s-menu .body{flex:1;display:flex;flex-direction:column;min-height:0}
+.cats{display:flex;background:var(--yel);overflow-x:auto;flex-shrink:0;padding:.4rem .4rem 0;gap:.3rem}.cats::-webkit-scrollbar{display:none}
+.cat{flex:1;min-width:4.6rem;padding:.55rem .4rem;display:flex;flex-direction:column;align-items:center;gap:.1rem;font-weight:900;font-size:.95rem;color:var(--ink);border-radius:14px 14px 0 0;white-space:nowrap}
+.cat .em{font-size:1.7rem}
+.cat.on{background:var(--bg);color:var(--red)}
+.grid{flex:1;overflow-y:auto;padding:.9rem;display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;align-content:start;background:var(--bg)}
 @media(min-width:620px){.grid{grid-template-columns:repeat(3,1fr)}}
 .card{background:#fff;border:2px solid var(--line);border-radius:var(--r);overflow:hidden;text-align:left;display:flex;flex-direction:column;position:relative}
 .card:active{border-color:var(--red);transform:scale(.98)}
-.card .pic{height:6.4rem;display:flex;align-items:center;justify-content:center;font-size:3.6rem}
+.card .pic{aspect-ratio:1/1;width:100%;object-fit:cover;background:#f1ece0}
+.card{border-radius:20px;border:3px solid transparent;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.card .info{text-align:center}
 .card .info{padding:.6rem .7rem .8rem}
 .card .nm{font-weight:700;font-size:1rem;line-height:1.25;min-height:2.5em}
 .card .pr{margin-top:.2rem;font-weight:900;color:var(--red);font-size:1.05rem}
@@ -88,7 +90,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .sheet{background:var(--bg);width:100%;max-height:92%;border-radius:26px 26px 0 0;display:flex;flex-direction:column;overflow:hidden}
 .sheet.center{border-radius:26px;margin:auto 1.2rem;max-height:80%}
 .sheet .hd{display:flex;align-items:center;gap:.8rem;padding:1rem 1.1rem;background:#fff;border-bottom:1px solid var(--line)}
-.sheet .hd .em{font-size:2.6rem}
+.sheet .hd .ph{width:4.2rem;height:4.2rem;border-radius:14px;object-fit:cover}
+.credit{position:absolute;right:.8rem;bottom:.8rem;font-size:.7rem;color:rgba(255,255,255,.8);text-decoration:underline;z-index:3}
 .sheet .hd .nm{font-weight:900;font-size:1.2rem}
 .sheet .hd .pr{color:var(--red);font-weight:900}
 .sheet .hd .x{margin-left:auto;font-size:1.6rem;color:var(--ink-3);padding:.3rem .6rem}
@@ -112,7 +115,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 /* 장바구니 */
 .list{flex:1;overflow-y:auto;padding:.9rem;display:flex;flex-direction:column;gap:.7rem}
 .row{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:.8rem;display:flex;gap:.8rem;align-items:center}
-.row .em{font-size:2.4rem;width:3.4rem;text-align:center}
+.row .ph{width:3.8rem;height:3.8rem;border-radius:12px;object-fit:cover}
 .row .mid{flex:1;min-width:0}
 .row .nm{font-weight:900}
 .row .sub{font-size:.85rem;color:var(--ink-3);margin-top:.15rem}
@@ -167,7 +170,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
   <p>키오스크 주문 연습 · 화면을 눌러 시작</p>
   <div class="hero">🍔🍟🥤</div>
   <button class="touch" id="btnStart">주문 시작하기 👆</button>
-  <div class="notice">※ 교육용 연습 앱입니다. 실제 결제·주문이 되지 않으며, 특정 브랜드와 무관합니다.</div>
+  <a class="credit" href="사진출처.txt" target="_blank">사진 출처</a>
+  <div class="notice">※ 교육용 연습 앱입니다. 사진은 Wikimedia Commons(CC) 자료입니다. 실제 결제·주문이 되지 않으며, 특정 브랜드와 무관합니다.</div>
 </section>
 
 <!-- 매장/포장 -->
@@ -328,7 +332,7 @@ function renderMenu(){
   const items=curCat==='rec'?M.filter(m=>m.rec):M.filter(m=>m.c===curCat);
   $('#grid').innerHTML=items.map(m=>`<button class="card" data-id="${m.id}">
     ${m.tag?`<span class="tag ${m.tag}">${m.tag==='new'?'NEW':'인기'}</span>`:''}
-    <div class="pic" style="background:${m.bg}">${m.em}</div>
+    <img class="pic" src="images/${m.id}.jpg" alt="${m.nm}" loading="lazy">
     <div class="info"><div class="nm">${m.nm}</div><div class="pr">${won(m.pr)}</div></div></button>`).join('');
   $$('.card').forEach(b=>b.onclick=()=>openItem(b.dataset.id));
   updateBar();
@@ -359,7 +363,7 @@ function openItem(id){
   function draw(){
     const o=(arr,key,two)=>`<div class="opts ${two?'two':''}">${arr.map(a=>`<button class="opt ${st[key]===a.id?'on':''}" data-k="${key}" data-v="${a.id}"><span class="em">${a.em}</span>${a.nm}<small>${a.up?'+'+won(a.up):'기본'}</small></button>`).join('')}</div>`;
     root.innerHTML=`<div class="modal"><div class="sheet">
-      <div class="hd"><span class="em">${m.em}</span><div><div class="nm">${m.nm}</div><div class="pr">${won(m.pr)}</div></div><button class="x" id="mx">✕</button></div>
+      <div class="hd"><img class="ph" src="images/${m.id}.jpg" alt=""><div><div class="nm">${m.nm}</div><div class="pr">${won(m.pr)}</div></div><button class="x" id="mx">✕</button></div>
       <div class="bd">
         ${m.set?`<div class="grp"><h4>구성 선택</h4><div class="opts">
           <button class="opt ${st.mode==='single'?'on':''}" data-k="mode" data-v="single"><span class="em">🍔</span>단품<small>버거만</small></button>
@@ -400,7 +404,7 @@ function renderCart(){
   const t=cartTotals();
   $('#tQty').textContent=t.n+'개';$('#tSum').textContent=won(t.sum);
   $('#cartPay').disabled=t.n===0;
-  $('#cartList').innerHTML=cart.length?cart.map((c,i)=>`<div class="row"><div class="em">${c.em}</div>
+  $('#cartList').innerHTML=cart.length?cart.map((c,i)=>`<div class="row"><img class="ph" src="images/${c.mid}.jpg" alt="">
     <div class="mid"><div class="nm">${c.name}</div>${c.sub?`<div class="sub">${c.sub}</div>`:''}<div class="rp">${won(c.price*c.qty)}</div></div>
     <div class="qty"><button data-m="${i}" ${c.qty<=1?'disabled':''}>−</button><span>${c.qty}</span><button data-p="${i}">+</button></div>
     <button class="del" data-d="${i}" aria-label="삭제">🗑️</button></div>`).join('')
