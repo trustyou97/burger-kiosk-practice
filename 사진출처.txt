@@ -1,29 +1,33 @@
-사진 출처: Wikimedia Commons (재사용 허용 라이선스)
+사진 출처: Unsplash (Unsplash License, 무료 사용 가능). 각 사진은 Unsplash의 해당 작가 작품입니다.
 
-[b1] NCI Visuals Food Hamburger.jpg / Public domain / Len Rizzi (photographer) / https://commons.wikimedia.org/wiki/File:NCI_Visuals_Food_Hamburger.jpg
-[b2] Cheeseburger.jpg / Public domain / Renee Comet (photographer) / https://commons.wikimedia.org/wiki/File:Cheeseburger.jpg
-[b3] Bulgogi burger 1.jpg / CC BY-SA 2.0 / star5112 / https://commons.wikimedia.org/wiki/File:Bulgogi_burger_1.jpg
-[b4] Shrimp Burger.jpg / CC BY-SA 4.0 / Ceeseven / https://commons.wikimedia.org/wiki/File:Shrimp_Burger.jpg
-[b5] Fried chicken burger .jpg / CC0 / Kurt Kaiser / https://commons.wikimedia.org/wiki/File:Fried_chicken_burger_.jpg
-[b6] Avocado burger and bacon cheeseburger.jpg / CC BY 2.0 / lazy fri13th / https://commons.wikimedia.org/wiki/File:Avocado_burger_and_bacon_cheeseburger.jpg
-[b7] Cheeseburger.jpg / Public domain / Renee Comet (photographer) / https://commons.wikimedia.org/wiki/File:Cheeseburger.jpg
-[b8] Double Cheeseburger.jpg / CC BY 3.0 / Horacio Cambeiro / https://commons.wikimedia.org/wiki/File:Double_Cheeseburger.jpg
-[k1] Impossible chicken nuggets 3.jpg / CC0 / Mx. Granger / https://commons.wikimedia.org/wiki/File:Impossible_chicken_nuggets_3.jpg
-[k2] Impossible chicken nuggets 2.jpg / CC0 / Mx. Granger / https://commons.wikimedia.org/wiki/File:Impossible_chicken_nuggets_2.jpg
-[k3] Sweet and Spicy Chicken Wings (7983997608).jpg / CC BY 2.0 / Sodanie Chea from Norwalk, Ca, United States / https://commons.wikimedia.org/wiki/File:Sweet_and_Spicy_Chicken_Wings_(7983997608).jpg
-[k4] Fried chicken drumsticks.jpg / CC BY-SA 4.0 / Mumujit / https://commons.wikimedia.org/wiki/File:Fried_chicken_drumsticks.jpg
-[s1] Truffle oil french fries (33024792848).jpg / CC BY-SA 2.0 / Tony Webster from Minneapolis, Minnesota, United States / https://commons.wikimedia.org/wiki/File:Truffle_oil_french_fries_(33024792848).jpg
-[s2] Mozzarella 394.jpg / Public domain / Alvis at English Wikibooks / https://commons.wikimedia.org/wiki/File:Mozzarella_394.jpg
-[s3] Bowl'o'Coleslaw modified.jpg / CC BY-SA 2.0 /  / https://commons.wikimedia.org/wiki/File:Bowl%27o%27Coleslaw_modified.jpg
-[s4] Marketside hash browns.jpg / CC0 / Fumikas Sagisavas / https://commons.wikimedia.org/wiki/File:Marketside_hash_browns.jpg
-[d1] Glass cola.jpg / Public domain / pic_p_ter / https://commons.wikimedia.org/wiki/File:Glass_cola.jpg
-[d2] Coca cola glass.jpg / CC BY 2.0 / Rich Moffitt / https://commons.wikimedia.org/wiki/File:Coca_cola_glass.jpg
-[d3] Orange juice 1 edit1.jpg / Public domain / Agency of the United States Department of Agriculture
-Edited Version by: Arad / https://commons.wikimedia.org/wiki/File:Orange_juice_1_edit1.jpg
-[d4] Iced Americano 1.jpg / CC BY-SA 4.0 / Challapramod / https://commons.wikimedia.org/wiki/File:Iced_Americano_1.jpg
-[d5] Strawberry milk shake (cropped).jpg / Public domain / Renee Comet (Photographer) / https://commons.wikimedia.org/wiki/File:Strawberry_milk_shake_(cropped).jpg
-[d6] Vanilla milkshake at Lunchbox Laboratories.jpg / CC BY 2.0 / jencu from bay area, usa / https://commons.wikimedia.org/wiki/File:Vanilla_milkshake_at_Lunchbox_Laboratories.jpg
-[e1] Liat Portal for Foodie Disorder - Chocolate and vanilla soft serve ice cream cone.jpg / CC BY-SA 4.0 / HaJunkiyada / https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Chocolate_and_vanilla_soft_serve_ice_cream_cone.jpg
-[e2] Butterscotch sundae with chocolate chip ice cream and jimmies - Massachusetts.jpg / CC0 / Daderot / https://commons.wikimedia.org/wiki/File:Butterscotch_sundae_with_chocolate_chip_ice_cream_and_jimmies_-_Massachusetts.jpg
-[e3] Pie day apple pie slice.jpg / CC BY 4.0 / Shisma / https://commons.wikimedia.org/wiki/File:Pie_day_apple_pie_slice.jpg
-[e4] Helmet sundae with chocolate ice cream and chocolate sprinkles at Citizens Bank Park.jpeg / CC BY-SA 4.0 / Dough4872 / https://commons.wikimedia.org/wiki/File:Helmet_sundae_with_chocolate_ice_cream_and_chocolate_sprinkles_at_Citizens_Bank_Park.jpeg
+b1: https://unsplash.com/photos/1568901346375-23c9450c58cd (photo-1568901346375-23c9450c58cd) - amirali mirhashemian / Unsplash
+b2: https://unsplash.com/photos/1667329829058-ac191ba4a905 (photo-1667329829058-ac191ba4a905) - Adam Bartoszewicz / Unsplash
+b3: https://unsplash.com/photos/1625683257212-116d74981941 (photo-1625683257212-116d74981941) - Israel Albornoz / Unsplash
+b4: https://unsplash.com/photos/1700768400970-428c50bffc11 (photo-1700768400970-428c50bffc11) - Crunch / Unsplash
+b5: https://unsplash.com/photos/1606755962773-d324e0a13086 (photo-1606755962773-d324e0a13086) - Eiliv Aceron / Unsplash
+b6: https://unsplash.com/photos/1595531172949-30922c28a240 (photo-1595531172949-30922c28a240) - Carlos Davila Cepeda / Unsplash
+b7: https://unsplash.com/photos/1757834787931-ddd70f3379a5 (photo-1757834787931-ddd70f3379a5) - Stanley Kustamin / Unsplash
+b8: https://unsplash.com/photos/1572802419224-296b0aeee0d9 (photo-1572802419224-296b0aeee0d9) - amirali mirhashemian / Unsplash
+k1: https://unsplash.com/photos/1619881590738-a111d176d906 (photo-1619881590738-a111d176d906) - Brett Jordan / Unsplash
+k2: https://unsplash.com/photos/1627662168223-7df99068099a (photo-1627662168223-7df99068099a) - Tyson / Unsplash
+k3: https://unsplash.com/photos/1567620832903-9fc6debc209f (photo-1567620832903-9fc6debc209f) - Chad Montano / Unsplash
+k4: https://unsplash.com/photos/1569691899455-88464f6d3ab1 (photo-1569691899455-88464f6d3ab1) - Erik Mclean / Unsplash
+s1: https://unsplash.com/photos/1630384060421-cb20d0e0649d (photo-1630384060421-cb20d0e0649d) - Mitchell Luo / Unsplash
+s2: https://unsplash.com/photos/1778449665117-2c607bbc7415 (photo-1778449665117-2c607bbc7415) - Shoeib Abolhassani / Unsplash
+s3: https://unsplash.com/photos/1781019450251-26e5ef42e089 (photo-1781019450251-26e5ef42e089) - Carmela Lustre / Unsplash
+s4: https://unsplash.com/photos/1562967916-eb82221dfb92 (photo-1562967916-eb82221dfb92) - Leo Roza / Unsplash
+d1: https://unsplash.com/photos/1629654613528-5d0a2e4166de (photo-1629654613528-5d0a2e4166de) - Qasim Malick / Unsplash
+d2: https://unsplash.com/photos/1621330716555-5cad596c4562 (photo-1621330716555-5cad596c4562) - montatip lilitsanong / Unsplash
+d3: https://unsplash.com/photos/1600271886742-f049cd451bba (photo-1600271886742-f049cd451bba) - Abhishek Hajare / Unsplash
+d4: https://unsplash.com/photos/1581996323441-538096e854b9 (photo-1581996323441-538096e854b9) - Mayur / Unsplash
+d5: https://unsplash.com/photos/1579954115545-a95591f28bfc (photo-1579954115545-a95591f28bfc) - Sebastian Coman Photography / Unsplash
+d6: https://unsplash.com/photos/1662192511709-e75d67367638 (photo-1662192511709-e75d67367638) - kimia kazemi / Unsplash
+e1: https://unsplash.com/photos/1697125138277-962ef4126de4 (photo-1697125138277-962ef4126de4) - Annie Hatuanh / Unsplash
+e2: https://unsplash.com/photos/1633881613795-d273150581ee (photo-1633881613795-d273150581ee) - VD Photography / Unsplash
+e3: https://unsplash.com/photos/1769434128977-d7619fd4d74e (photo-1769434128977-d7619fd4d74e) - Mila / Unsplash
+e4: https://unsplash.com/photos/1579954115563-e72bf1381629 (photo-1579954115563-e72bf1381629) - Sebastian Coman Photography / Unsplash
+o_single: https://unsplash.com/photos/1568901346375-23c9450c58cd (photo-1568901346375-23c9450c58cd) - amirali mirhashemian / Unsplash
+o_set: https://unsplash.com/photos/1551782450-a2132b4ba21d (photo-1551782450-a2132b4ba21d) - sk / Unsplash
+o_large: https://unsplash.com/photos/1763689389824-dd2cea2e5772 (photo-1763689389824-dd2cea2e5772) - Hanvin Cheong / Unsplash
+t_dine: https://unsplash.com/photos/1551782450-17144efb9c50 (photo-1551782450-17144efb9c50) - sk / Unsplash
+t_take: https://unsplash.com/photos/1616429368325-d5d7542b0ec3 (photo-1616429368325-d5d7542b0ec3) - Dmitry Mashkin / Unsplash

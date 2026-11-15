@@ -156,6 +156,46 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .toast{position:absolute;left:50%;bottom:6.5rem;transform:translateX(-50%);background:rgba(30,30,30,.92);color:#fff;padding:.7rem 1.2rem;border-radius:99px;font-weight:700;z-index:50;font-size:.95rem;max-width:90%;text-align:center}
 .mission{background:var(--yel-soft);border-bottom:2px solid var(--yel);padding:.5rem 1rem;font-weight:700;font-size:.9rem;display:flex;gap:.5rem;align-items:center}
 .mission b{color:var(--red)}
+
+/* ===== 라이트 테마 (패스트푸드 키오스크 느낌) ===== */
+body{background:#e9e6df}
+#kiosk{background:#f6f4ef}
+.topbar{background:#fff;color:var(--red);border-bottom:4px solid var(--yel);padding:.6rem 1rem}
+.topbar .t{color:var(--ink)}
+.chip{background:var(--red-soft);color:var(--red)}
+.chip:active{background:#f9d3d0}
+.mission{background:#fff;border-bottom:1px solid var(--line)}
+#s-start{background:#fff;color:var(--ink)}
+#s-start h1{color:var(--red);text-shadow:none}
+#s-start p{color:var(--ink-2)}
+#s-start::before,#s-start::after{height:22%}
+.hero{display:flex;gap:.8rem;justify-content:center;filter:none}
+.hero img{width:7.2rem;height:7.2rem;border-radius:50%;object-fit:cover;border:5px solid #fff;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.hero img:nth-child(2){margin-top:1.2rem}
+.touch{background:var(--red);color:#fff;box-shadow:0 6px 0 var(--red-2)}
+.touch:active{box-shadow:0 2px 0 var(--red-2)}
+.notice{color:var(--ink-3)}
+.credit{color:var(--ink-3)}
+.pick{padding:0;overflow:hidden;justify-content:flex-start;gap:0;border:3px solid var(--line);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.pick img{width:100%;flex:1;min-height:0;object-fit:cover}
+.pick .lbl{padding:1rem .5rem}
+.pick{font-size:1.5rem}
+.pick small{display:block;margin-top:.3rem}
+#s-menu .body{flex-direction:row}
+.cats{width:6.4rem;flex-direction:column;background:#fff;border-right:1px solid var(--line);padding:.4rem 0;gap:0;overflow-x:hidden;overflow-y:auto}
+.cat{flex:none;width:100%;min-width:0;padding:.7rem .2rem;border-radius:0;border-left:5px solid transparent;color:var(--ink-2);font-size:.88rem;gap:.35rem}
+.cat img{width:3.6rem;height:3.6rem;border-radius:50%;object-fit:cover;border:3px solid var(--line)}
+.cat.on{background:var(--yel-soft);color:var(--red);border-left-color:var(--red)}
+.cat.on img{border-color:var(--yel)}
+.grid{background:#f6f4ef}
+.card{border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.card .info{text-align:left;padding:.6rem .8rem .8rem}
+.opt{padding:0 0 .6rem;overflow:hidden;gap:.35rem}
+.opt .oi{width:100%;aspect-ratio:4/3;object-fit:cover}
+.opt .oi.big{transform:scale(1.25)}
+.opt.on{box-shadow:0 0 0 2px var(--red) inset}
+.cartbar{border-top:1px solid var(--line)}
+.btn.red{background:var(--red)}
 </style>
 </head>
 <body>
@@ -169,10 +209,10 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
   <span class="logo big">B</span>
   <h1>맛있는 버거,<br>직접 주문해 보세요!</h1>
   <p>키오스크 주문 연습 · 화면을 눌러 시작</p>
-  <div class="hero">🍔🍟🥤</div>
+  <div class="hero"><img src="images/b1.jpg" alt=""><img src="images/s1.jpg" alt=""><img src="images/d1.jpg" alt=""></div>
   <button class="touch" id="btnStart">주문 시작하기 👆</button>
-  <a class="credit" href="사진출처.txt" target="_blank">사진 출처</a>
-  <div class="notice">※ 교육용 연습 앱입니다. 사진은 Wikimedia Commons(CC) 자료입니다. 실제 결제·주문이 되지 않으며, 특정 브랜드와 무관합니다.</div>
+  <a class="credit" href="사진출처.txt" target="_blank">사진 출처 (Unsplash)</a>
+  <div class="notice">※ 교육용 연습 앱입니다. 사진은 Unsplash 무료 이미지입니다. 실제 결제·주문이 되지 않으며, 특정 브랜드와 무관합니다.</div>
 </section>
 
 <!-- 매장/포장 -->
@@ -180,8 +220,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
   <div class="topbar"><span class="logo">B</span><span class="t">식사 장소를 골라주세요</span><span class="sp"></span><button class="chip" data-home>처음으로</button></div>
   <div class="title">드시고 가시나요, 가져가시나요?</div>
   <div class="pickwrap">
-    <button class="pick" data-type="매장"><span class="em">🍽️</span>매장에서 먹기<small>트레이에 담아 드려요</small></button>
-    <button class="pick" data-type="포장"><span class="em">🛍️</span>포장하기<small>종이봉투에 담아 드려요</small></button>
+    <button class="pick" data-type="매장"><img src="images/t_dine.jpg" alt=""><span class="lbl">매장에서 먹기<small>트레이에 담아 드려요</small></span></button>
+    <button class="pick" data-type="포장"><img src="images/t_take.jpg" alt=""><span class="lbl">포장하기<small>종이봉투에 담아 드려요</small></span></button>
   </div>
 </section>
 
@@ -241,14 +281,14 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 <script>
 /* ===== 메뉴 데이터 ===== */
 const CATS=[
- {id:'rec',nm:'추천',em:'⭐'},{id:'burger',nm:'버거',em:'🍔'},{id:'chicken',nm:'치킨·스낵',em:'🍗'},
- {id:'side',nm:'사이드',em:'🍟'},{id:'drink',nm:'음료',em:'🥤'},{id:'dessert',nm:'디저트',em:'🍦'}
+ {id:'rec',nm:'추천',img:'b2'},{id:'burger',nm:'버거',img:'b1'},{id:'chicken',nm:'치킨·스낵',img:'k3'},
+ {id:'side',nm:'사이드',img:'s1'},{id:'drink',nm:'음료',img:'d1'},{id:'dessert',nm:'디저트',img:'e1'}
 ];
 const M=[
  {id:'b1',c:'burger',nm:'빅 버거',em:'🍔',pr:6300,bg:'#ffe9a8',set:1,tag:'hot',rec:1},
  {id:'b2',c:'burger',nm:'치즈 더블 버거',em:'🍔',pr:5600,bg:'#ffd6a0',set:1,rec:1},
  {id:'b3',c:'burger',nm:'불고기 버거',em:'🍔',pr:3900,bg:'#ffc9b8',set:1},
- {id:'b4',c:'burger',nm:'새우 버거',em:'🦐',pr:4900,bg:'#ffd9d0',set:1,tag:'new'},
+ {id:'b4',c:'burger',nm:'크리스피 치킨 샌드',em:'🍔',pr:4900,bg:'#ffd9d0',set:1,tag:'new'},
  {id:'b5',c:'burger',nm:'치킨 버거',em:'🍔',pr:4500,bg:'#fff0b8',set:1},
  {id:'b6',c:'burger',nm:'베이컨 토마토 디럭스',em:'🥓',pr:7300,bg:'#ffd0c0',set:1,rec:1},
  {id:'b7',c:'burger',nm:'치즈 버거',em:'🧀',pr:3500,bg:'#ffeaa0',set:1},
@@ -256,11 +296,11 @@ const M=[
  {id:'k1',c:'chicken',nm:'치킨 너겟 6조각',em:'🍗',pr:4800,bg:'#ffe3b0',rec:1},
  {id:'k2',c:'chicken',nm:'치킨 너겟 10조각',em:'🍗',pr:7500,bg:'#ffe3b0'},
  {id:'k3',c:'chicken',nm:'스파이시 윙 4조각',em:'🍖',pr:6000,bg:'#ffd0c0',tag:'hot'},
- {id:'k4',c:'chicken',nm:'통닭다리 치킨 2조각',em:'🍗',pr:6800,bg:'#ffdcb0'},
+ {id:'k4',c:'chicken',nm:'크리스피 치킨 2조각',em:'🍗',pr:6800,bg:'#ffdcb0'},
  {id:'s1',c:'side',nm:'감자튀김',em:'🍟',pr:2300,bg:'#fff2b0',size:1,rec:1},
  {id:'s2',c:'side',nm:'치즈 스틱',em:'🧀',pr:2800,bg:'#ffeaa0'},
  {id:'s3',c:'side',nm:'코울슬로',em:'🥗',pr:2000,bg:'#dff5d0'},
- {id:'s4',c:'side',nm:'해시 브라운',em:'🥔',pr:1800,bg:'#ffe9b0'},
+ {id:'s4',c:'side',nm:'치킨 텐더 3조각',em:'🍗',pr:3200,bg:'#ffe9b0'},
  {id:'d1',c:'drink',nm:'콜라',em:'🥤',pr:2000,bg:'#f0d8d0',size:1,rec:1},
  {id:'d2',c:'drink',nm:'사이다',em:'🥤',pr:2000,bg:'#dff2e0',size:1},
  {id:'d3',c:'drink',nm:'오렌지 주스',em:'🍊',pr:2500,bg:'#ffe2b0',size:1},
@@ -270,9 +310,9 @@ const M=[
  {id:'e1',c:'dessert',nm:'소프트 콘 아이스크림',em:'🍦',pr:1500,bg:'#fff3d6',rec:1},
  {id:'e2',c:'dessert',nm:'초코 선데',em:'🍨',pr:2700,bg:'#e8d8d0'},
  {id:'e3',c:'dessert',nm:'애플 파이',em:'🥧',pr:2300,bg:'#ffe3b0'},
- {id:'e4',c:'dessert',nm:'맥플러리 스타일 아이스',em:'🍧',pr:3800,bg:'#f0e6ff'}
+ {id:'e4',c:'dessert',nm:'바닐라 초코 파르페',em:'🍧',pr:3800,bg:'#f0e6ff'}
 ];
-const SIDES=[{id:'s1',nm:'감자튀김',em:'🍟',up:0},{id:'s2',nm:'치즈 스틱',em:'🧀',up:500},{id:'s3',nm:'코울슬로',em:'🥗',up:0},{id:'s4',nm:'해시 브라운',em:'🥔',up:0}];
+const SIDES=[{id:'s1',nm:'감자튀김',em:'🍟',up:0},{id:'s2',nm:'치즈 스틱',em:'🧀',up:500},{id:'s3',nm:'코울슬로',em:'🥗',up:0},{id:'s4',nm:'치킨 텐더',em:'🍗',up:700}];
 const DRINKS=[{id:'d1',nm:'콜라',em:'🥤',up:0},{id:'d2',nm:'사이다',em:'🥤',up:0},{id:'d3',nm:'오렌지 주스',em:'🍊',up:500},{id:'d4',nm:'아이스 아메리카노',em:'🧊',up:0},{id:'d5',nm:'딸기 쉐이크',em:'🍓',up:1000}];
 const SET_UP={single:0,set:2200,large:2900};
 const MISSIONS=[
@@ -328,7 +368,7 @@ $('#newMission').onclick=()=>{missionIdx=(missionIdx+1)%MISSIONS.length;$('#miss
 /* ===== 메뉴 ===== */
 function renderMenu(){
   $('#missionTxt').textContent=MISSIONS[missionIdx];
-  $('#cats').innerHTML=CATS.map(c=>`<button class="cat ${c.id===curCat?'on':''}" data-c="${c.id}"><span class="em">${c.em}</span>${c.nm}</button>`).join('');
+  $('#cats').innerHTML=CATS.map(c=>`<button class="cat ${c.id===curCat?'on':''}" data-c="${c.id}"><img src="images/${c.img}.jpg" alt=""><span>${c.nm}</span></button>`).join('');
   $$('.cat').forEach(b=>b.onclick=()=>{curCat=b.dataset.c;renderMenu();$('#grid').scrollTop=0;});
   const items=curCat==='rec'?M.filter(m=>m.rec):M.filter(m=>m.c===curCat);
   $('#grid').innerHTML=items.map(m=>`<button class="card" data-id="${m.id}">
@@ -362,19 +402,19 @@ function openItem(id){
     return p*st.qty;
   }
   function draw(){
-    const o=(arr,key,two)=>`<div class="opts ${two?'two':''}">${arr.map(a=>`<button class="opt ${st[key]===a.id?'on':''}" data-k="${key}" data-v="${a.id}"><span class="em">${a.em}</span>${a.nm}<small>${a.up?'+'+won(a.up):'기본'}</small></button>`).join('')}</div>`;
+    const o=(arr,key,two)=>`<div class="opts ${two?'two':''}">${arr.map(a=>`<button class="opt ${st[key]===a.id?'on':''}" data-k="${key}" data-v="${a.id}"><img class="oi" src="images/${a.id}.jpg" alt="">${a.nm}<small>${a.up?'+'+won(a.up):'기본'}</small></button>`).join('')}</div>`;
     root.innerHTML=`<div class="modal"><div class="sheet">
       <div class="hd"><img class="ph" src="images/${m.id}.jpg" alt=""><div><div class="nm">${m.nm}</div><div class="pr">${won(m.pr)}</div></div><button class="x" id="mx">✕</button></div>
       <div class="bd">
         ${m.set?`<div class="grp"><h4>구성 선택</h4><div class="opts">
-          <button class="opt ${st.mode==='single'?'on':''}" data-k="mode" data-v="single"><span class="em">🍔</span>단품<small>버거만</small></button>
-          <button class="opt ${st.mode==='set'?'on':''}" data-k="mode" data-v="set"><span class="em">🍔🍟</span>세트<small>+${won(SET_UP.set)}</small></button>
-          <button class="opt ${st.mode==='large'?'on':''}" data-k="mode" data-v="large"><span class="em">🍟🥤</span>라지 세트<small>+${won(SET_UP.large)}</small></button></div></div>
+          <button class="opt ${st.mode==='single'?'on':''}" data-k="mode" data-v="single"><img class="oi" src="images/o_single.jpg" alt="">단품<small>버거만</small></button>
+          <button class="opt ${st.mode==='set'?'on':''}" data-k="mode" data-v="set"><img class="oi" src="images/o_set.jpg" alt="">세트<small>+${won(SET_UP.set)}</small></button>
+          <button class="opt ${st.mode==='large'?'on':''}" data-k="mode" data-v="large"><img class="oi" src="images/o_large.jpg" alt="">라지 세트<small>+${won(SET_UP.large)}</small></button></div></div>
         ${st.mode!=='single'?`<div class="grp"><h4>사이드 선택 <small>세트에 포함</small></h4>${o(SIDES,'side')}</div>
         <div class="grp"><h4>음료 선택 <small>세트에 포함</small></h4>${o(DRINKS,'drink')}</div>`:''}`:''}
         ${m.size?`<div class="grp"><h4>사이즈 선택</h4><div class="opts two">
-          <button class="opt ${st.sizeSel==='M'?'on':''}" data-k="sizeSel" data-v="M"><span class="em">${m.em}</span>보통<small>기본</small></button>
-          <button class="opt ${st.sizeSel==='L'?'on':''}" data-k="sizeSel" data-v="L"><span class="em">${m.em}</span>크게<small>+${won(m.id.startsWith('d')?500:700)}</small></button></div></div>`:''}
+          <button class="opt ${st.sizeSel==='M'?'on':''}" data-k="sizeSel" data-v="M"><img class="oi" src="images/${m.id}.jpg" alt="">보통<small>기본</small></button>
+          <button class="opt ${st.sizeSel==='L'?'on':''}" data-k="sizeSel" data-v="L"><img class="oi big" src="images/${m.id}.jpg" alt="">크게<small>+${won(m.id.startsWith('d')?500:700)}</small></button></div></div>`:''}
         <div class="grp" style="display:flex;align-items:center;justify-content:space-between"><h4 style="margin:0">수량</h4>
           <div class="qty"><button id="qm" ${st.qty<=1?'disabled':''}>−</button><span>${st.qty}</span><button id="qp">+</button></div></div>
       </div>
