@@ -207,6 +207,14 @@ body{background:#e9e6df}
 .pick:active{border-color:var(--red);background:var(--red-soft)}
 .opt .ico{font-size:2rem;line-height:1;padding-top:.7rem}
 .opt:has(.ico){padding:0 0 .6rem}
+.chip.home{display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap;padding:.4rem .7rem;font-size:.85rem}
+.topbar{gap:.5rem}
+.topbar .t{white-space:nowrap;font-size:1.1rem}
+.topbar .ktlogo{margin-left:auto}
+.cartbar{gap:.45rem}
+.cartbar .btn{padding:.8rem .75rem;font-size:1rem;white-space:nowrap}
+.cartbar .sum{font-size:.82rem;min-width:0;line-height:1.3}
+.cartbar .sum b{font-size:1.1rem}
 .ktlogo{height:1.35rem;width:auto;margin-left:.2rem;flex-shrink:0}
 .ktlogo.abs{position:absolute;right:.9rem;top:.8rem;z-index:6}
 
@@ -296,7 +304,7 @@ body{background:#e9e6df}
 
 <!-- 매장/포장 -->
 <section class="screen hidden" id="s-type">
-  <div class="topbar"><button class="chip" id="typeBack">◀ 이전</button><span class="t">식사 장소를 골라주세요</span><span class="sp"></span><button class="chip" data-home>처음으로</button></div>
+  <div class="topbar"><button class="chip home" data-home><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>처음으로</button><span class="logo">B</span><span class="t">식사 장소를 골라주세요</span></div>
   <div class="title">식사 방법을 선택해 주세요</div>
   <div class="pickwrap">
     <button class="pick" data-type="매장">
@@ -310,11 +318,11 @@ body{background:#e9e6df}
 
 <!-- 메뉴 -->
 <section class="screen hidden" id="s-menu">
-  <div class="topbar"><button class="chip" id="menuBack">◀ 이전</button><span class="t">메뉴 선택</span><span class="chip" id="typeChip"></span><span class="sp"></span><button class="chip" data-home>처음으로</button></div>
+  <div class="topbar"><button class="chip home" data-home><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>처음으로</button><span class="logo">B</span><span class="t">메뉴 선택</span><span class="chip" id="typeChip"></span></div>
   <div class="mission" id="mission">🎯 연습 미션: <span id="missionTxt"></span> <button class="chip" style="background:var(--yel);color:var(--ink);margin-left:auto" id="newMission">바꾸기</button></div>
   <div class="body"><nav class="cats" id="cats"></nav><div class="grid" id="grid"></div></div>
   <div class="cartbar"><div class="sum">담은 메뉴 <b id="cCount">0</b>개 · <b id="cSum">0</b>원</div>
-    <button class="btn ghost" id="btnCart">장바구니</button><button class="btn red" id="btnPay" disabled>결제하기</button></div>
+    <button class="btn ghost" id="menuBack">◀ 이전</button><button class="btn ghost" id="btnCart">장바구니</button><button class="btn red" id="btnPay" disabled>결제하기</button></div>
 </section>
 
 <!-- 장바구니 -->
@@ -464,7 +472,6 @@ function goHome(){clearPayTimers();discount=0;usedMethods=[];cart=[];orderType='
 /* ===== 시작 ===== */
 $('#btnStart').onclick=()=>show('s-type');
 $$('[data-home]').forEach(b=>b.onclick=goHome);
-$('#typeBack').onclick=()=>show('s-start');
 $('#menuBack').onclick=()=>show('s-type');
 $$('[data-type]').forEach(b=>b.onclick=()=>{orderType=b.dataset.type;$('#typeChip').textContent=orderType==='매장'?'🍽️ 매장':'🛍️ 포장';renderMenu();show('s-menu');});
 $('#fsUp').onclick=()=>{fs=Math.min(1.3,fs+.1);document.documentElement.style.setProperty('--fs',fs)};
